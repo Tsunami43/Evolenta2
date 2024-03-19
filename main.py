@@ -13,27 +13,32 @@ menu = ConsoleMenu(
     subtitle=subtitle
 )
 
+
+def input_a_b():
+    try:
+        a = float(input("Введите число a:"))
+        b = float(input("Введите число b:"))
+    except Exception as ex:
+        return ex
+
+
 # Create menu items
 items = [
     FunctionItem(
         "Сумма (+)",
-        input,
-        ["Введите число a:"]
+        input_a_b
     ),
     FunctionItem(
         "Разница (-)",
-        input,
-        ["Введите число a:"]
+        input_a_b
     ),
     FunctionItem(
         "Произведение (*)",
-        input,
-        ["Введите число a:"]
+        input_a_b
     ),
     FunctionItem(
         "Частное (/)",
-        input,
-        ["Введите число a:"]
+        input_a_b
     )
 ]
 
